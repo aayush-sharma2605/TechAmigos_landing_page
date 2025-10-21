@@ -4,29 +4,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Club Name</title>
+    <title>TechAmigos</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <h1 class="logo">Tech Amigos Club</h1>
-            <ul>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#current-members">Current Members</a></li>
-                <li><a href="#past-members">Past Members</a></li>
-            </ul>
-            <div class="theme-toggle" id="theme-toggle">
-                <div class="toggle-circle"></div>
-                <i class="icon sun">☀️</i>
-                <i class="icon moon">🌙</i>
-            </div>
+    <!-- Full-screen spark canvas overlay -->
+    <canvas id="sparkCanvas"></canvas>
 
-        </nav>
-    </header>
+    <!-- Floating Circular Menu Button -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-section">
+            <h1 class="logo">Menu</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#current-members">Current Members</a></li>
+            <li><a href="#past-members">Past Members</a></li>
+        </ul>
+
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="hero">
@@ -60,19 +74,19 @@
         <h2>Current Members</h2>
         <div class="members-grid">
             <div class="member-card">
-                <img src="https://via.placeholder.com/150" alt="Member 1">
+                <img src="1.jpeg" alt="Member 1">
                 <h3>Aashta</h3>
                 <p>President</p>
             </div>
             <div class="member-card">
-                <img src="https://via.placeholder.com/150" alt="Member 2">
-                <h3>Priya Singh</h3>
+                <img src="namit.jpeg" alt="Member 2">
+                <h3>Namit</h3>
                 <p>Vice President</p>
             </div>
             <div class="member-card">
-                <img src="https://via.placeholder.com/150" alt="Member 3">
-                <h3>Rohit Mehta</h3>
-                <p>Technical Lead</p>
+                <img src="2.jpeg" alt="Member 3">
+                <h3>Kamakshi</h3>
+                <p>Secretary</p>
             </div>
         </div>
     </section>
@@ -83,12 +97,12 @@
         <div class="members-grid">
             <div class="member-card">
                 <img src="https://via.placeholder.com/150" alt="Past Member 1">
-                <h3>Ananya Verma</h3>
+                <h3>no user found</h3>
                 <p>Ex-President (2023–2024)</p>
             </div>
             <div class="member-card">
                 <img src="https://via.placeholder.com/150" alt="Past Member 2">
-                <h3>Ravi Kumar</h3>
+                <h3>no user found</h3>
                 <p>Ex-Technical Head</p>
             </div>
         </div>
@@ -100,6 +114,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 
